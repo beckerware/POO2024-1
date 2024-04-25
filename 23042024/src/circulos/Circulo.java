@@ -16,27 +16,44 @@ public class Circulo {
         raio = r;
     }
 
-    public Circulo(int x, int y){
+    public Circulo(int x, int y) {
         centrox = x;
         centroy = y;
         raio = 1;
     }
 
-    public Circulo(int r){
+    public Circulo(int r) {
         centrox = 0;
         centroy = 0;
         raio = r;
     }
 
-    public Circulo(Circulo circulo){
+    public Circulo(Circulo circulo) {
         centrox = circulo.getCentrox();
         centroy = circulo.getCentroy();
         raio = circulo.getRaio();
     }
 
+    public Circulo(Ponto ponto, int raio) {
+        this.centrox = ponto.getX();
+        this.centroy = ponto.getY();
+        this.raio = raio;
+    }
+
+    public Circulo(Ponto ponto, double diametro) {
+        this.centrox = ponto.getX();
+        this.centroy = ponto.getY();
+        this.raio = (int)diametro / 2;
+    }
+
     public void moverCirculo(int novox, int novoy) {
         setCentrox(novox);
         setCentroy(novoy);
+    }
+
+    public void moverCirculo(Ponto ponto){
+        setCentrox(ponto.getX());
+        setCentroy(ponto.getY());
     }
 
     public int getCentrox() {
@@ -71,9 +88,9 @@ public class Circulo {
         this.raio--;
     }
 
-    public void representacao(){
-        System.out.println("O círculo se encontra em X: " + this.centrox + " e Y: " + centroy + ", e tem " + this.raio + " unidade(s) de raio.");
+    public void representacao() {
+        System.out.println("O círculo se encontra em X: " + this.centrox + " e Y: " + centroy + ", e tem " + this.raio
+                + " unidade(s) de raio.");
     }
-
 
 }
