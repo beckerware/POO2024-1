@@ -1,9 +1,4 @@
-/*mover um circulo para qualquer posição;
- aumentar o tamanho de um círculo em uma unidade;
- diminuir o tamanho de um círculo em uma unidade;
- informar uma representação textual do círculo, contendo seu ponto central e raio. */
-
-package circulos;
+package planocartesiano;
 
 public class Circulo {
     private int centrox;

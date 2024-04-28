@@ -1,15 +1,27 @@
-import calculos.Produto;
-import circulos.Circulo;
+package principal;
 
-public class App {
-    public static void main(String[] args) throws Exception {
+import planocartesiano.Circulo;
+import planocartesiano.Ponto;
+import supermercado.Produto;
+
+public class Main {
+    public static void main(String[] args){
+
+        /*
+         * Main de todas as classes, caso queira rodar um programa só para a atividade
+         * inteira;
+         * Na package principal tem o main de cada contexto
+         */
+
+        Ponto ponto1 = new Ponto(4, 8);
+        Ponto ponto2 = new Ponto(17, 23);
         Produto produto = new Produto();
+        double aumento = 0.4;
+        double desconto = 0.2;
         Circulo circulo1 = new Circulo(2, 4, 5);
         Circulo circulo2 = new Circulo(13, 7);
         Circulo circulo3 = new Circulo(5);
         Circulo circulo4 = new Circulo(circulo1);
-        double aumento = 0.4;
-        double desconto = 0.2;
 
         produto.setNome("Sabão em pó");
         produto.setCodigo("12345");
@@ -40,9 +52,12 @@ public class App {
 
         System.out.println("Círculo 4:");
         circulo4.representacao();
+        
+        System.out.println("-------------------------------------");
+
+
+        System.out.println(
+                "Distância entre o ponto 1 e o ponto 2: " + ponto1.calculaDistancia(ponto1, ponto2) + " unidades.");
     }
-
-    
-
 
 }

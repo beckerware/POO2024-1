@@ -1,4 +1,4 @@
-package calculos;
+package supermercado;
 
 public class Produto {
     private String nome;
