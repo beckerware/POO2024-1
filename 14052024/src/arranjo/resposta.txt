@@ -1,0 +1,3 @@
+O melhor seria utilizar um código como o seguinte:
+        throw new IllegalArgumentException("O arranjo não deve estar vazio!");
+A exceção IllegalArgumentException é utilizada para indicar que um argumento passado para um método não é válido.
